@@ -19,7 +19,7 @@ testing {
 tasks.withType<Test>().configureEach {
     useJUnitPlatform()
     distribution {
-        enabled = false
+        enabled = true
         maxLocalExecutors = 0
         maxRemoteExecutors = 2
     }
