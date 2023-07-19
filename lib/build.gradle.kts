@@ -18,6 +18,7 @@ testing {
 
 tasks.withType<Test>().configureEach {
     useJUnitPlatform()
+    inputs.files(layout.buildDirectory.file("tmp/test/kover-agent.args"))
     distribution {
         enabled = true
         maxLocalExecutors = 0
