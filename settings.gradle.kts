@@ -4,7 +4,7 @@ plugins {
 }
 
 gradleEnterprise {
-    server = "https://ge-helm-standalone-unstable.grdev.net"
+    server = "https://ge.solutions-team.gradle.com"
     buildScan {
         publishAlways()
         capture {
@@ -14,4 +14,6 @@ gradleEnterprise {
 }
 
 rootProject.name = "kover-reproducer"
-include("lib")
+include("libOne")
+include ("otherLibs:subLib")
+include ("libTwo")
