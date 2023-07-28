@@ -8,10 +8,12 @@ repositories {
     mavenCentral()
 }
 
-testing {
-    suites {
-        val test by getting(JvmTestSuite::class) {
-            useKotlinTest("1.8.20")
-        }
-    }
+dependencies {
+    testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
+    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.9.2")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:5.9.2")
+}
+
+tasks.test {
+    useJUnitPlatform()
 }
